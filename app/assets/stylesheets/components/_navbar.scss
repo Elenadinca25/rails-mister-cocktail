@@ -1,12 +1,14 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: black;
-   padding-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+
   h1 {
     color: pink;
     text-align: center;
-    font-size: 20px;
-    padding-top: 20px;
+    font-size: 15px;
+    padding-top: 10px;
   }
   h3 {
     color: pink;

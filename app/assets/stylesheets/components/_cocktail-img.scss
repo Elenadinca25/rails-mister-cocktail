@@ -1,11 +1,9 @@
 .cocktail-img {
-  border-radius: 8px;
+  border-radius: 16px;
   border: 1px solid #ddd;
-  padding: 5px;
+  padding: 15px;
   max-width: 100%;
   height: auto;
+  display: flex;
 }
 
-.cocktail-img:hover {
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}

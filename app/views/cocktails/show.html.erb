@@ -1,17 +1,34 @@
-<h1><%= @cocktail.name %></h1>
+<div class="container show-container">
+   <div class="cocktail-img" style="background-image: url('<%= cl_image_path @cocktail.photo.key, height: 250 %>');">
+   <body style="background-color:grey;">
+  <div>
 
-<h3>Doses:</h3>
-<ul>
- <% @cocktail.doses.each do |dose| %>
-  <li><%= dose.description %>
-    <%= dose.ingredient.name %>
-    <%= link_to "Delete", dose_path(dose), method: :delete, class: "btn btn-primary", :data => {:confirm => "Are You Sure?"} %>
-    </li>
-  <% end %>
-</ul>
+  <h1>
+    <%= @cocktail.name %>
+  </h1>
+  <p> <%= link_to 'Edit', edit_cocktail_path(@cocktail),
+    class: "btn btn-success" %>
+    <%= link_to 'Add Ingredients', new_cocktail_dose_path(@cocktail),
+    class: "btn btn-info" %>
+  </p>
 
-<%= link_to '🥄Add dose', new_cocktail_dose_path(@cocktail),  class: "btn btn-primary" %>
+  <ul id="cocktail-ingredients">
+    <% @cocktail.doses.each do |dose| %>
+      <li> <%= dose.description %> - <%= dose.ingredient.name %> |
+        <%= link_to 'Delete',
+        dose_path(dose.id),
+        method: :delete,
+        data: { confirm: "Are you sure?" },
+        class: "text-info" %>
+      </li>
+    <% end %>
+  </ul>
 
-<%= link_to '🍸🍹All cocktails', cocktails_path,  class: "btn btn-primary"  %>
-
+  <%= link_to "Delete cocktail", cocktail_path(@cocktail),
+      method: :delete,
+      data: { confirm: "Are you sure?" },
+      class: "btn btn-danger rounded" %>
+  <%= link_to 'Back to the list', cocktails_path, class: "btn btn-warning" %>
+</div>
+</div>
 

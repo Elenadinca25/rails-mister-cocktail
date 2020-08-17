@@ -1,10 +1,29 @@
-<h1>Let's get drunk!!!!!!!!!</h1>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-  <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-  <% end %>
-</ul>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'cocktails' %>)">
+  <div class="text-center pb-5">
+    <h1 id="index-title">Cocktails </h1>
+    <br>
+    <%= link_to "Add your cocktail", new_cocktail_path, class: 'btn btn-success' %>
+  </div>
+</div>
 
-<%= link_to '🍸Add your cocktail', new_cocktail_path, class: "btn btn-primary pad20" %>
+<div class="cocktails-container">
+  <div class="row justify-content-center">
+    <body style="background-color:grey;">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-sm-6 col-lg-3 my-3">
+        <% if cocktail.photo.attached? %>
+          <%= link_to cocktail_path(cocktail) do %>
+            <div class="card-category" style="background-image: url('<%= cl_image_path cocktail.photo.key, height: 250 %>');">
+             <%= cocktail.name %>
+          <% end %>
+          </div>
+        <% end %>
+         </div>
+    <% end %>
+  </div>
+</div>
 
+ <div class="footer">
+    <p class="bottom-footer">&copy; MrCocktail.com | Designed by Ely</p>
+</div>

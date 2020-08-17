@@ -1,0 +1,22 @@
+.footer {
+   background-color: black;
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-around;
+    p {
+        color:white;
+    }
+}
+
+.socials:hover {
+    color: white;
+    transition: all .3s;
+}
+
+.bottom-footer {
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}

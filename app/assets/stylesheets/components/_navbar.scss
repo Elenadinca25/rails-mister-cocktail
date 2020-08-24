@@ -29,7 +29,12 @@
 
 .nav {
   justify-content: space-between;
+  & :hover {
+    color: white;
+    text-decoration: none;
+  }
 }
+
 
 p {
   text-align: center;

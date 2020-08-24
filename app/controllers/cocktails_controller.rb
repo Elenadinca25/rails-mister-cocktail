@@ -29,12 +29,12 @@ class CocktailsController < ApplicationController
 
   def destroy
     @cocktail.destroy
-    redirect_to cocktails_path, notice: "#{@cocktail} was successfully destroyed."
+    redirect_to cocktails_path
   end
 
   def update
     if @cocktail.update(cocktail_params)
-      redirect_to @cocktails, notice: "#{@cocktail} was successfully updated."
+      redirect_to @cocktails
     else
       render :edit
     end

@@ -1,16 +1,28 @@
 .cocktail-img {
   border-radius: 16px;
   border: 1px solid #ddd;
-  // display: flex;
-  // align-items: center;
-}
-
+  align-items: center;
 
   h1 {
-    text-align: center;
-    font-size: 50px;
-    padding-top: 10px;
+    color: pink;
+    padding-left: 10px;
+  }
+
+  p {
+    color: pink;
+  }
 }
+
+.show-container {
+  // display: flex;
+  text-align: center;
+}
+
+//   h1 {
+//     text-align: center;
+//     font-size: 50px;
+//     padding-top: 10px;
+// }
 
 
 

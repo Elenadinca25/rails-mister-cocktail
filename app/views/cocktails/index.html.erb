@@ -1,15 +1,16 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'cocktail-image-background.jpg' %>)">
-   <body style="background-color:lightgrey;">
   <div class="text-center pb-5">
     <h1 id="index-title">Cocktails </h1>
-    <br>
-    <%= link_to "Add your cocktail", new_cocktail_path, class: 'btn btn-warning' %>
+     <p><%= link_to "Add your cocktail", new_cocktail_path, class: 'btn btn-primary' %></p>
   </div>
 </div>
 
-<div class="cocktails-container">
-  <div class="row justify-content-center">
 
+<!-- <div class="cocktails-container">
+  <div class="row justify-content-center"> -->
+<div class="container">
+  <div class="row justify-content-between">
+   <!--  <div class="col-12"> -->
     <% @cocktails.each do |cocktail| %>
       <div class="col-sm-6 col-lg-3 my-3">
         <% if cocktail.photo.attached? %>

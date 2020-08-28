@@ -1,4 +1,3 @@
-<body style="background-color:lightgrey;">
 <div class="row">
   <div class="left-button">
     <%= link_to '🔙', cocktails_path, class: "ml-3" %>
@@ -6,6 +5,8 @@
 </div>
 
 <div class="d-flex flex-wrap">
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+    <div class="card-product flex-container space-between m-3 p-3">
     <div class="cocktail-img" style="background-image: url('<%= cl_image_path @cocktail.photo.key, height: 250 %>');">
        <h1><%= @cocktail.name.capitalize %></h1>
             <% @cocktail.doses.each do |dose| %>
@@ -16,17 +17,25 @@
              <i class="far fa-trash-alt"></i>
               <% end %></p>
               <% end %>
+            </div>
+          </div>
     </div>
+
+
 </div>
 
-<%= link_to 'Edit', edit_cocktail_path(@cocktail),
-      class: "btn btn-warning" %>
-      <%= link_to 'Add 🍾', new_cocktail_dose_path(@cocktail),
-      class: "btn btn-warning" %>
+<div class="dropdown show">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Customize cocktail
+  </a>
 
-    <%= link_to "Delete", cocktail_path(@cocktail),
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item"> <%= link_to "Edit🍾", edit_cocktail_path(@cocktail), class: "btn btn-secondary" %></a>
+    <a class="dropdown-item" > <%= link_to "Add🍾", new_cocktail_dose_path(@cocktail), class: "btn btn-secondary" %></a>
+    <a class="dropdown-item" > <%= link_to "Delete", cocktail_path(@cocktail),
         method: :delete,
         data: { confirm: "Are you sure?" },
-        class: "btn btn-warning" %>
-
+        class: "btn btn-secondary" %></a>
+  </div>
+</div>
 

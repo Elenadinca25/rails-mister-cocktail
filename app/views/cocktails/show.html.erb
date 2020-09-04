@@ -1,16 +1,16 @@
-<div class="row">
-  <div class="left-button">
-    <%= link_to '🔙', cocktails_path, class: "ml-3" %>
-  </div>
-</div>
 
+
+
+<!--  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'cocktailsss.jpg' %>)">
+
+<!--
 <div class="d-flex flex-wrap">
   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
     <div class="card-product flex-container space-between m-3 p-3">
-    <div class="cocktail-img" style="background-image: url('<%= cl_image_path @cocktail.photo.key, height: 250 %>');">
-       <h1><%= @cocktail.name.capitalize %></h1>
+      <div class="cocktail-img" style="background-image: url('<%= cl_image_path @cocktail.photo.key, height: 100 %>');">
+          <h1><%= @cocktail.name.capitalize %></h1>
             <% @cocktail.doses.each do |dose| %>
-             <div class="ml-2">
+            <div class="ml-2">
              <p><%= dose.description %> - <%= dose.ingredient.name %> <%= link_to dose_path(dose.id),
               method: :delete,
               data: { confirm: "Are you sure?" } do %>
@@ -18,24 +18,74 @@
               <% end %></p>
               <% end %>
             </div>
-          </div>
+      </div>
     </div>
-
-
+  </div>
 </div>
+</div> -->
 
-<div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Customize cocktail
+<!-- </div> -->
+<div class="card-container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+     <div class="dropdown-show">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Customize cocktail
   </a>
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item"> <%= link_to "Edit🍾", edit_cocktail_path(@cocktail), class: "btn btn-secondary" %></a>
-    <a class="dropdown-item" > <%= link_to "Add🍾", new_cocktail_dose_path(@cocktail), class: "btn btn-secondary" %></a>
-    <a class="dropdown-item" > <%= link_to "Delete", cocktail_path(@cocktail),
-        method: :delete,
-        data: { confirm: "Are you sure?" },
-        class: "btn btn-secondary" %></a>
+    <div class="dropdown-menu-cont">
+      <a class="dropdown-item" > <%= link_to "Add", new_cocktail_dose_path(@cocktail), class: "btn btn-secondary button" %></a>
+      <a class="dropdown-item"> <%= link_to "Edit", edit_cocktail_path(@cocktail), class: "btn btn-secondary button" %></a>
+      <a class="dropdown-item" > <%= link_to "Delete", cocktail_path(@cocktail),
+          method: :delete,
+          data: { confirm: "Are you sure?" },
+          class: "btn btn-secondary button" %>
+
+      </a>
+    </div>
   </div>
+</div>
+    </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="flex-container">
+
+<div class="row">
+  <div class="left-button">
+    <%= link_to '🔙',cocktails_path, class: "ml-3" %>
+   <!--  <i class="fas fa-chevron-left"></i> -->
+  </div>
+</div>
+
+
+
+  <div class="card" style="width: 25rem;">
+   <img class="card-img-top" src="<%= cl_image_path @cocktail.photo.key, height: 400 %>" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">
+        <h1><%= @cocktail.name.capitalize %></h1>
+              <% @cocktail.doses.each do |dose| %>
+              <div class="ml-2">
+               <p><%= dose.description %> - <%= dose.ingredient.name %> <%= link_to dose_path(dose.id),
+                method: :delete,
+                data: { confirm: "Are you sure?" } do %>
+               <i class="far fa-trash-alt"></i>
+                <% end %></p>
+                <% end %>
+      </p>
+    </div>
+  </div>
+
+
+</div>
 </div>
 

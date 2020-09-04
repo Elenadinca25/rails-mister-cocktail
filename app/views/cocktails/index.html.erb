@@ -1,16 +1,30 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'cocktail-image-background.jpg' %>)">
-  <div class="text-center pb-5">
-    <h1 id="index-title">Cocktails </h1>
-     <p><%= link_to "Add your cocktail", new_cocktail_path, class: 'btn btn-primary' %></p>
+
+<div class="row">
+  <div class="left-button">
+    <%= link_to '🔙',root_path, class: "ml-3" %>
   </div>
 </div>
 
 
-<!-- <div class="cocktails-container">
-  <div class="row justify-content-center"> -->
-<div class="container">
-  <div class="row justify-content-between">
-   <!--  <div class="col-12"> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Mister Cocktail <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search by cocktail name" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+  <div class="d-flex flex-wrap">
     <% @cocktails.each do |cocktail| %>
       <div class="col-sm-6 col-lg-3 my-3">
         <% if cocktail.photo.attached? %>
@@ -20,11 +34,11 @@
           <% end %>
           </div>
         <% end %>
-         </div>
+      </div>
     <% end %>
   </div>
-</div>
 
- <div class="footer">
-    <p class="bottom-footer">&copy; MrCocktail.com | Designed by Ely</p>
+
+<div class="footer">
+  <p class="bottom-footer">&copy; MrCocktail.com | Designed by Ely</p>
 </div>

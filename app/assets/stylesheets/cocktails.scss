@@ -12,3 +12,31 @@
 .dropdown-toggle {
   display: flex;
 }
+
+.justify-content-center mt-3 {
+  display: flex;
+
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dropdown-menu {
+  vertical-align: top;
+}
+
+.dropdown-menu-cont {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dropdown-item {
+  width: 0px;
+  padding: 0px;
+}
+.button {
+  margin: 5px 10px;
+}

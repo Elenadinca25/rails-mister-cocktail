@@ -1,13 +1,14 @@
 <div class="navbar-lewagon ">
 <div class="container">
-    <h1 id="welcome">Welcome to</h1>
-    <h3 class="title">Mister Cocktail</h3>
-    <ul class="nav">
+    <h3 id="welcome">Welcome to</h3>
+    <h1 class="title">Mister Cocktail</h1>
+   <!--  <ul class="nav">
      <li><a href="#">Home</a></li>
         <li><p><%= link_to"Party ON🍸" , cocktails_path, class:"btn btn-primary"  %></p></li>
         <li><a href="#">Events</a></li>
-      </ul>
+      </ul> -->
     </div>
+     <p><%= link_to"Party ON🍸" , cocktails_path, class:"btn btn-primary" %></p>
   </div>
      <!--  <p>Now is your chance to be creative and get drunk!</p> -->
 
@@ -20,13 +21,14 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <%=image_tag("cocktails.jpg", height: 700, width: 1800, crop: :fill  )%>
+     <!--  <p><%= link_to"Party ON🍸" , cocktails_path, class:"btn btn-primary"  %></p> -->
+      <%=image_tag("Heart-Halloween.jpg", height: 700, width: 1500, crop: :fit )%>
     </div>
     <div class="carousel-item">
-      <%=image_tag("cocktail-image-background.jpg", height: 700, width: 1800, crop: :fill  )%>
+      <%=image_tag("cocktails.jpg", height: 700, width: 1500, crop: :fit )%>
     </div>
     <div class="carousel-item">
-      <%=image_tag("cocktailsss.jpg", height: 700, width: 1800, crop: :fill  )%>
+      <%=image_tag("cocktail-image-background.jpg", height: 700, width: 1500, crop: :fit )%>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

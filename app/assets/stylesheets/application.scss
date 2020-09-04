@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import "cocktails";
+
+@media(max-width: 576px) {
+  .btn-lg {
+    font-size: 0.5rem;
+  }
+}

@@ -4,20 +4,24 @@
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
 
-  h1 {
-    color: pink;
+  h3 {
+    color: white;
     text-align: center;
     font-size: 15px;
     padding-top: 10px;
+    font-style: oblique;
+    text-shadow: 2px 2px blue !important;
   }
-  h3 {
-    color: pink;
+  h1 {
+    color: white;
     text-align: center;
-    font-size: 35px;
+    font-size: 45px;
     font-weight: bold;
     font-style: oblique;
+    text-shadow: 2px 2px blue !important;
   }
 }
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -39,3 +43,15 @@
 p {
   text-align: center;
 }
+
+// .navbar-toggler {
+//   color: blue !important;
+// }
+
+
+// .bg-light {
+//   background-color: black  !important;
+// }
+
+
+

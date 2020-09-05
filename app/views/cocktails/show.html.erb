@@ -72,7 +72,7 @@
    <img class="card-img-top" src="<%= cl_image_path @cocktail.photo.key, height: 400 %>" alt="Card image cap">
     <div class="card-body">
       <p class="card-text">
-        <h1><%= @cocktail.name.capitalize %></h1>
+        <h1><strong><%= @cocktail.name.capitalize %></strong></h1>
               <% @cocktail.doses.each do |dose| %>
               <div class="ml-2">
                <p><%= dose.description %> - <%= dose.ingredient.name %> <%= link_to dose_path(dose.id),

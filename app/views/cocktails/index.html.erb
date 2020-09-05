@@ -12,14 +12,29 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
+     <!--  <li class="nav-item active">
         <a class="nav-link" href="#">Mister Cocktail <span class="sr-only">(current)</span></a>
-      </li>
+      </li> -->
+      <div class="add-button">
+      <%= link_to "+🍸", new_cocktail_path, class: 'btn btn-light' %>
+    </div>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <!-- <div class="add-button">
+      <%= link_to "+🍸", new_cocktail_path, class: 'btn btn-light' %>
+    </div> -->
+    <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search by cocktail name" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </form> -->
+    <%= form_tag cocktails_path, class: "form-inline", method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control search-input",
+      placeholder: "Find a cocktail" %>
+    <%= button_tag( :class => "btn btn-search") do%>
+      <i class="fa fa-search"> </i>
+    <% end %>
+  <% end %>
   </div>
 </nav>
 

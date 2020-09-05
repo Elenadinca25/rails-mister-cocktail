@@ -40,3 +40,51 @@
 .button {
   margin: 5px 10px;
 }
+
+.card-body {
+   h1 {
+    text-align: center;
+    color: #167FFB;
+  }
+
+  p {
+    color: #167FFB;
+    text-align: center;
+  }
+}
+
+.add-button {
+  // justify-content: space-between;
+  padding-right: 420px;
+}
+
+.navbar-dark .navbar-toggler {
+   background: transparent;
+  color: rgba(254, 237, 215, 0.5);
+  border-style: solid solid solid none;
+  border-color: rgba(254, 237, 215, 0.5);
+  border-radius: 0;
+  &:hover {
+    background-color: rgba(254, 237, 215, 0.7);
+    box-shadow: none;
+     color: black;
+    border: none;
+    margin-left: 0;
+  }
+}
+
+.btn-light {
+  background-color: transparent;
+}
+
+.left-button {
+  padding-left: 30px;
+}
+
+.carousel-item {
+  width: 100%;
+}
+// a.btn.btn-light {
+//    display: center;
+//    justify-content: space-around;
+// }

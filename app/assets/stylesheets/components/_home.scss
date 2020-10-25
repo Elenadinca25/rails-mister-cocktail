@@ -1,0 +1,28 @@
+// .wrapper{
+//     max-width: 400px;
+//     background: whitesmoke;
+//     height: 40px;
+//     text-align: right;
+// }
+
+// .marquee {
+//     // background: red;
+//     white-space: nowrap;
+//     -webkit-animation: rightThenLeft 4s linear;
+// }
+
+.sitemessage {
+    display: inline-block;
+    white-space: nowrap;
+    animation: floatText 15s infinite linear;
+    padding-left: 100%; /*Initial offset*/
+  }
+  .sitemessage:hover {
+    animation-play-state: paused;
+  }
+  @keyframes floatText {
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  

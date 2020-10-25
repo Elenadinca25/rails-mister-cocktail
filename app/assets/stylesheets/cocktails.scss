@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .container {
-  background-color: rgba(34, 20, 8, 0.6);
+  background-color: #F4F4F4;
 }
 
 .ml-2 {
@@ -44,11 +44,11 @@
 .card-body {
    h1 {
     text-align: center;
-    color: #167FFB;
+    color: whitesmoke;
   }
 
   p {
-    color: #167FFB;
+    color:whitesmoke;
     text-align: center;
   }
 }
@@ -59,7 +59,7 @@
 }
 
 .navbar-dark .navbar-toggler {
-   background: transparent;
+  background: transparent;
   color: rgba(254, 237, 215, 0.5);
   border-style: solid solid solid none;
   border-color: rgba(254, 237, 215, 0.5);

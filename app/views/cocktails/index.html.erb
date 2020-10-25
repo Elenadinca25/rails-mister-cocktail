@@ -1,44 +1,35 @@
-
-<div class="row">
-  <div class="left-button">
-    <%= link_to '🔙',root_path, class: "ml-3" %>
+<div class="container justify-content-start p-2">
+  <div class="row m-2">
+    <div class="col-2">
+  </div>
+  <div class="col-8">
+    <p class="text-center p-0 m-0">
+    <%# <div class="add-button"> %>
+      <%= link_to "Add a new 🍸", new_cocktail_path, class: 'btn btn-light' %>
+    <%# </div> %>
+    </p>
   </div>
 </div>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-     <!--  <li class="nav-item active">
-        <a class="nav-link" href="#">Mister Cocktail <span class="sr-only">(current)</span></a>
-      </li> -->
-      <div class="add-button">
-      <%= link_to "+🍸", new_cocktail_path, class: 'btn btn-light' %>
-    </div>
-    </ul>
-    <!-- <div class="add-button">
-      <%= link_to "+🍸", new_cocktail_path, class: 'btn btn-light' %>
-    </div> -->
-    <!-- <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search by cocktail name" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> -->
-    <%= form_tag cocktails_path, class: "form-inline", method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control search-input",
-      placeholder: "Find a cocktail" %>
-    <%= button_tag( :class => "btn btn-search") do%>
-      <i class="fa fa-search"> </i>
+
+<div class="container-index justify-content-center mt-3">
+    <%= form_tag cocktails_path, class: "search-tab",  method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-field justify-content-center",
+        placeholder: "Search by a cocktail name"%>
+      <%= button_tag :submit, class: "create-button p-1" do %>
+        <i class="fas fa-search"></i>
+      <% end %>
     <% end %>
-  <% end %>
   </div>
-</nav>
+</div>
 
-
+    <%# <div class="add-button">
+      <%= link_to "+🍸", new_cocktail_path, class: 'btn btn-light' %>
+    <%# </div> %> 
+    
   <div class="d-flex flex-wrap">
     <% @cocktails.each do |cocktail| %>
       <div class="col-sm-6 col-lg-3 my-3">
@@ -53,7 +44,8 @@
     <% end %>
   </div>
 
-
-<div class="footer">
-  <p class="bottom-footer">&copy; MrCocktail.com | Designed by Ely</p>
-</div>
+<%# <div class="row">
+  <div class="left-button">
+    <%= link_to '🔙',root_path, class: "ml-3" %>
+  <%# </div>
+</div> %> 

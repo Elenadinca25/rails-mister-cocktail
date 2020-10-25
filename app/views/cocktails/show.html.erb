@@ -1,32 +1,5 @@
-
-
-
-<!--  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'cocktailsss.jpg' %>)">
-
-<!--
-<div class="d-flex flex-wrap">
-  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-    <div class="card-product flex-container space-between m-3 p-3">
-      <div class="cocktail-img" style="background-image: url('<%= cl_image_path @cocktail.photo.key, height: 100 %>');">
-          <h1><%= @cocktail.name.capitalize %></h1>
-            <% @cocktail.doses.each do |dose| %>
-            <div class="ml-2">
-             <p><%= dose.description %> - <%= dose.ingredient.name %> <%= link_to dose_path(dose.id),
-              method: :delete,
-              data: { confirm: "Are you sure?" } do %>
-             <i class="far fa-trash-alt"></i>
-              <% end %></p>
-              <% end %>
-            </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div> -->
-
-<!-- </div> -->
 <div class="card-container">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light ">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -46,23 +19,21 @@
           method: :delete,
           data: { confirm: "Are you sure?" },
           class: "btn btn-secondary button" %>
-
       </a>
+     </div>
     </div>
-  </div>
+   </div>
+  </li>
+</ul>
 </div>
-    </li>
-    </ul>
-  </div>
 </nav>
 
 
 <div class="flex-container">
-
 <div class="row">
   <div class="left-button">
     <%= link_to '🔙',cocktails_path, class: "ml-3" %>
-   <!--  <i class="fas fa-chevron-left"></i> -->
+     <%# <i class="fas fa-chevron-left"></i> %>
   </div>
 </div>
 
@@ -73,19 +44,18 @@
     <div class="card-body">
       <p class="card-text">
         <h1><strong><%= @cocktail.name.capitalize %></strong></h1>
-              <% @cocktail.doses.each do |dose| %>
-              <div class="ml-2">
-               <p><%= dose.description %> - <%= dose.ingredient.name %> <%= link_to dose_path(dose.id),
-                method: :delete,
-                data: { confirm: "Are you sure?" } do %>
-               <i class="far fa-trash-alt"></i>
-                <% end %></p>
-                <% end %>
+          <% @cocktail.doses.each do |dose| %>
+            <div class="ml-2">
+            <p><%= dose.description %> - <%= dose.ingredient.name %> <%= link_to dose_path(dose.id),
+              method: :delete,
+              data: { confirm: "Are you sure?" } do %>
+              <i class="far fa-trash-alt"></i>
+              <% end %>
+            </p>
+          <% end %>
       </p>
     </div>
   </div>
-
-
 </div>
 </div>
 

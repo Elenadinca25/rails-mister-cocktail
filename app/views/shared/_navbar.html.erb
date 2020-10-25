@@ -1,0 +1,32 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+  <%= link_to root_path, class: "navbar-brand" do %>
+ 
+    <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXATnQCEDoUWUSCjsyBA1Pmy25nZS2AqXdrA&usqp=CAU"%>
+    </a>
+    <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <%= link_to "Home", root_path, class: "nav-link" %>
+        </li>
+        <%# <li class="nav-item active"> %>
+          <%# <%= link_to "Profile", class: "nav-link" %> 
+          
+        <%# </li>  %>
+        <li class="nav-item">
+          <%= link_to "About Us",  root_path, class: "nav-link" %>
+        </li>
+        
+        <li class="nav-item dropdown">
+        
+          <%= image_tag "https://image.shutterstock.com/image-vector/social-member-vector-icon-person-260nw-1139787308.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    </ul>
+  </div>
+</div>

@@ -1,28 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: black;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ddd;
+  background: white;
   position: sticky;
-
-  h3 {
-    color: white;
-    text-align: center;
-    font-size: 15px;
-    padding-top: 10px;
-    font-style: oblique;
-    text-shadow: 2px 2px #167FFB !important;
-  }
-  h1 {
-    color: white;
-    text-align: center;
-    font-size: 45px;
-    font-weight: bold;
-    font-style: oblique;
-    text-shadow: 2px 2px #167FFB !important;
-  }
 }
-
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -31,28 +11,3 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
-
-.nav {
-  justify-content: space-between;
-  & :hover {
-    color: white;
-    text-decoration: none;
-  }
-}
-
-
-p {
-  text-align: center;
-}
-
-// .navbar-toggler {
-//   color: blue !important;
-// }
-
-
-// .bg-light {
-//   background-color: black  !important;
-// }
-
-
-
